@@ -1,0 +1,40 @@
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: system-ui, sans-serif;
+}
+
+#root {
+  width: min(100% - 2rem, 900px);
+  margin-inline: auto;
+  padding-block: 3rem;
+}
+
+h1 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+input,
+textarea {
+  width: 100%;
+}
+
+button {
+  transition:
+    background-color var(--transition),
+    color var(--transition);
+}
