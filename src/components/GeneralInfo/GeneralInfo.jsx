@@ -30,7 +30,7 @@ function GeneralInfo() {
 
   return (
     <Card title="General Information" className="general-info">
-      <div className="field">
+      <div className={`field ${!isEditing ? "field--readonly" : ""}`}>
         <label htmlFor="name">Name</label>
 
         {isEditing ? (
@@ -47,7 +47,7 @@ function GeneralInfo() {
         )}
       </div>
 
-      <div className="field">
+      <div className={`field ${!isEditing ? "field--readonly" : ""}`}>
         <label htmlFor="email">Email</label>
 
         {isEditing ? (
@@ -64,7 +64,7 @@ function GeneralInfo() {
         )}
       </div>
 
-      <div className="field">
+      <div className={`field ${!isEditing ? "field--readonly" : ""}`}>
         <label htmlFor="phone">Phone</label>
 
         {isEditing ? (
