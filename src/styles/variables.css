@@ -1,7 +1,9 @@
 :root {
   --color-background: #f5f7fb;
-  --color-surface: #ffffff;
+  --color-surface: #fafafa;
   --color-border: #d6d9df;
+
+  --color-input: #fcfcfd;
 
   --color-text: #1f2937;
   --color-text-muted: #6b7280;
@@ -9,10 +11,10 @@
   --color-primary: #2563eb;
   --color-primary-hover: #1d4ed8;
 
-  --shadow-sm: 0 2px 8px rgb(0 0 0 / 8%);
-
   --radius-sm: 0.5rem;
   --radius-md: 0.75rem;
+
+  --shadow-sm: 0 2px 8px rgb(0 0 0 / 8%);
 
   --transition: 0.2s ease;
 }

@@ -1,3 +1,6 @@
+import Input from "../Input/Input";
+import Button from "../Button/Button";
+
 import "./GeneralInfo.css";
 
 function GeneralInfo() {
@@ -5,22 +8,27 @@ function GeneralInfo() {
     <section className="general-info">
       <h2>General Information</h2>
 
-      <label>
-        Name
-        <input type="text" />
-      </label>
+      <Input
+        id="name"
+        label="Name"
+        type="text"
+      />
 
-      <label>
-        Email
-        <input type="email" />
-      </label>
+      <Input
+        id="email"
+        label="Email"
+        type="email"
+      />
 
-      <label>
-        Phone
-        <input type="tel" />
-      </label>
+      <Input
+        id="phone"
+        label="Phone"
+        type="tel"
+      />
 
-      <button>Save</button>
+      <Button type="button">
+        Save
+      </Button>
     </section>
   );
 }
