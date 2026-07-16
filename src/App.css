@@ -1,3 +1,30 @@
 @import "./styles/reset.css";
 @import "./styles/variables.css";
 @import "./styles/global.css";
+
+.cv-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.section-wrapper {
+  position: relative;
+}
+
+.section-wrapper:not(:last-child)::after {
+  content: "";
+
+  display: block;
+  height: 3px;
+  margin-top: 2rem;
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--color-primary),
+      transparent
+    );
+}

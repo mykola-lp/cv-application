@@ -13,11 +13,19 @@ function App() {
     <main className="container">
       <h1>CV Builder</h1>
 
-      <GeneralInfo />
+      <section className="cv-sections">
+        <div className="section-wrapper">
+          <GeneralInfo />
+        </div>
 
-      <Education />
+        <div className="section-wrapper">
+          <Education />
+        </div>
 
-      <Experience />
+        <div className="section-wrapper">
+          <Experience />
+        </div>
+      </section>
     </main>
   );
 }
