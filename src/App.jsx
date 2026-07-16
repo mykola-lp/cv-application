@@ -4,7 +4,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 
-import { GeneralInfo } from './components';
+import { GeneralInfo, Education } from './components';
 
 import './App.css'
 
@@ -14,6 +14,8 @@ function App() {
       <h1>CV Builder</h1>
 
       <GeneralInfo />
+
+      <Education />
     </main>
   );
 }

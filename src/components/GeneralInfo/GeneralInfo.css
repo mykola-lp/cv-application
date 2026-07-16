@@ -7,32 +7,3 @@
 .general-info > button {
   align-self: flex-end;
 }
-
-.field label {
-  color: var(--color-text);
-}
-
-.field--readonly {
-  display: grid;
-  grid-template-columns: 90px 1fr;
-  align-items: center;
-  gap: 1rem;
-}
-
-.field--readonly label {
-  color: var(--color-text-muted);
-  letter-spacing: 0.05em;
-
-  margin: 0;
-}
-
-.field-value {
-  padding: 0.65rem 1rem;
-
-  background-color: var(--color-output);
-
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm);
-
-  box-shadow: var(--shadow-sm);
-}

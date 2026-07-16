@@ -1,0 +1,9 @@
+.education {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.education > button {
+  align-self: flex-end;
+}
