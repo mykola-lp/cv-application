@@ -81,7 +81,10 @@ function Education() {
         )}
       </div>
 
-      <Button type="button" onClick={handleButtonClick}>
+      <Button
+        type="button"
+        onClick={handleButtonClick}
+       >
         {isEditing ? "Save" : "Edit"}
       </Button>
     </Card>

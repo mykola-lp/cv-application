@@ -1,0 +1,9 @@
+.experience {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.experience > button {
+  align-self: flex-end;
+}

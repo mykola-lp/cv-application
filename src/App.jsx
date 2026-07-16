@@ -4,7 +4,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 
-import { GeneralInfo, Education } from './components';
+import { GeneralInfo, Education, Experience } from './components';
 
 import './App.css'
 
@@ -16,6 +16,8 @@ function App() {
       <GeneralInfo />
 
       <Education />
+
+      <Experience />
     </main>
   );
 }
