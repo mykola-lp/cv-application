@@ -1,32 +1,22 @@
-import { useState } from "react";
-
 import Button from "../Button/Button";
 import Input from "../Input/Input";
 import Card from "../Card/Card";
 
+import useEditableForm from "../../hooks/useEditableForm";
+
 import "./GeneralInfo.css";
 
 function GeneralInfo() {
-  const [generalInfo, setGeneralInfo] = useState({
+  const {
+    values: generalInfo,
+    isEditing,
+    handleChange,
+    toggleEditing,
+  } = useEditableForm({
     name: "",
     email: "",
     phone: "",
   });
-
-  const [isEditing, setIsEditing] = useState(true);
-
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-
-    setGeneralInfo((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  const handleButtonClick = () => {
-    setIsEditing((prev) => !prev);
-  };
 
   return (
     <Card title="General Information" className="general-info">
@@ -83,7 +73,7 @@ function GeneralInfo() {
 
       <Button
         type="button"
-        onClick={handleButtonClick}
+        onClick={toggleEditing}
       >
         {isEditing ? "Save" : "Edit"}
       </Button>

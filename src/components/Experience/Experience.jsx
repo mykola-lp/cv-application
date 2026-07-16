@@ -1,34 +1,24 @@
-import { useState } from "react";
-
 import Button from "../Button/Button";
 import Input from "../Input/Input";
 import Card from "../Card/Card";
 
+import useEditableForm from "../../hooks/useEditableForm";
+
 import "./Experience.css";
 
 function Experience() {
-  const [experienceInfo, setExperienceInfo] = useState({
+  const {
+    values: experienceInfo,
+    isEditing,
+    handleChange,
+    toggleEditing,
+  } = useEditableForm({
     companyName: "",
     positionTitle: "",
     responsibilities: "",
     fromDate: "",
     untilDate: "",
   });
-
-  const [isEditing, setIsEditing] = useState(true);
-
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-
-    setExperienceInfo((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  const handleButtonClick = () => {
-    setIsEditing((prev) => !prev);
-  };
 
   return (
     <Card title="Practical Experience" className="experience">
@@ -119,7 +109,7 @@ function Experience() {
 
       <Button
         type="button"
-        onClick={handleButtonClick}
+        onClick={toggleEditing}
       >
         {isEditing ? "Save" : "Edit"}
       </Button>

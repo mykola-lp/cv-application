@@ -1,32 +1,22 @@
-import { useState } from "react";
-
 import Button from "../Button/Button";
 import Input from "../Input/Input";
 import Card from "../Card/Card";
 
+import useEditableForm from "../../hooks/useEditableForm";
+
 import "./Education.css";
 
 function Education() {
-  const [educationInfo, setEducationInfo] = useState({
+  const {
+    values: educationInfo,
+    isEditing,
+    handleChange,
+    toggleEditing,
+  } = useEditableForm({
     schoolName: "",
     titleOfStudy: "",
     studyDate: "",
   });
-
-  const [isEditing, setIsEditing] = useState(true);
-
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-
-    setEducationInfo((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  const handleButtonClick = () => {
-    setIsEditing((prev) => !prev);
-  };
 
   return (
     <Card title="Education" className="education">
@@ -83,8 +73,8 @@ function Education() {
 
       <Button
         type="button"
-        onClick={handleButtonClick}
-       >
+        onClick={toggleEditing}
+      >
         {isEditing ? "Save" : "Edit"}
       </Button>
     </Card>
